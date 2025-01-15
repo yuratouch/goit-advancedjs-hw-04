@@ -61,7 +61,6 @@ async function loadMoreImages() {
 
   if (images?.length === 0) {
     showElement(DOM.lastPage);
-
   } else if (images?.length) {
     DOM.gallery.insertAdjacentHTML('beforeend', generateGalleryMarkup(images));
     simpleLightboxInstance.refresh();
