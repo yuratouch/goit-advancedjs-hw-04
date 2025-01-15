@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const CONFIG = {
-  baseURL: 'https://pixabay.com',
+  baseURL: 'https://pixabay.com/api',
   imagesPerPage: 15,
 };
 axios.defaults.baseURL = CONFIG.baseURL;
@@ -18,7 +18,7 @@ async function fetchApiData(queryValue, page = 1) {
   };
 
   try {
-    const response = await axios.get(`/api`, { params });
+    const response = await axios.get(`/`, { params });
     const { hits, totalHits } = response?.data || {};
 
     return hits ? { images: hits, isNext: 15 * page < totalHits } : {};
