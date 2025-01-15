@@ -26,9 +26,9 @@
   animation: bblFadInOut 1.8s infinite ease-in-out;
 }
 .loader {
-  display: block;
+  display: none;
   margin: 0 auto;
-  color: #fff;
+  color: #4e75ff;
   font-size: 7px;
   position: relative;
   text-indent: -9999em;

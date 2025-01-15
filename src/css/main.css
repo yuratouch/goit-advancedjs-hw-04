@@ -1,6 +1,5 @@
 .form {
   padding: 60px;
-  margin-top: 60px;
   text-align: center;
 }
 
@@ -19,7 +18,7 @@
   padding-left: 10px;
 }
 
-.form-submit-btn {
+.button {
   min-width: 120px;
   min-height: 40px;
   padding: 8px 16px;
@@ -34,8 +33,18 @@
   transition: transform 0.3s ease;
 }
 
-.form-submit-btn:hover {
+.button:hover {
   background-color: #183bb6;
+}
+
+.button.load-more {
+  display: none;
+  margin: 0 auto;
+}
+
+.last-page-message {
+  display: none;
+  text-align: center;
 }
 
 .gallery-container {
@@ -47,21 +56,23 @@
 }
 
 .gallery-link {
-    position: relative;
-    display: block;
-    height: 100%;
-    border: 1px solid #808080;
+  position: relative;
+  display: block;
+  height: 100%;
+  border: 1px solid #808080;
+  max-height: 200px;
+  overflow: hidden;
 }
 
 .gallery-card-info {
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    bottom: 0;
-    background-color: #fff;
-    width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
 }
 
 .gallery-card-info li {
-    text-align: center;
+  text-align: center;
 }
