@@ -26,6 +26,8 @@ async function submitHandler(event) {
   const queryValue = event.target.elements['user-query'].value.trim();
 
   if (queryValue) {
+    DOM.gallery.innerHTML = '';
+    hideElement(DOM.loadMore);
     showElement(DOM.loader);
     savedQueryValue = queryValue;
 
@@ -45,6 +47,7 @@ async function submitHandler(event) {
         'Sorry, there are no images matching your search query. Please try again!'
       );
       hideElement(DOM.loader);
+      DOM.form.reset();
       return;
     }
   } else {
